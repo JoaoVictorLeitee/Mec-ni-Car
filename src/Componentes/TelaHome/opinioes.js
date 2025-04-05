@@ -128,6 +128,9 @@ const Opinioes = () => {
     return (
         <Section>
             <Titulo>Opiniões dos Nossos Clientes</Titulo>
+            <Descricao>
+                Os comentários que recebemos evidenciam a excelência dos nossos serviços e a dedicação com que atendemos cada cliente, sempre com foco na qualidade e na satisfação.
+            </Descricao>
             <Carrossel {...settings}>
                 <div><Imagem src={opiniao1} alt="Opinião 1" /></div>
                 <div><Imagem src={opiniao2} alt="Opinião 2" /></div>
@@ -148,5 +151,4 @@ const Opinioes = () => {
         </Section>
     );
 };
-
 export default Opinioes;
