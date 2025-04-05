@@ -112,7 +112,13 @@ const AvaliacaoGoogle = styled.div`
   }
 `;
 
-
+const Descricao = styled.p`
+  font-size: 18px;
+  max-width: 800px;
+  margin: -80px auto 80px;
+  color: #333;
+  line-height: 1.6;
+`;
 
 const Opinioes = () => {
     const settings = {
