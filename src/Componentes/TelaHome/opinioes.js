@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import GoogleLogo from "../../Imagens/google.png"
 
 
 import opiniao1 from '../../Imagens/opiniao1.png';
@@ -48,22 +49,69 @@ const Carrossel = styled(Slider)`
 const AvaliacaoGoogle = styled.div`
   margin-top: -300px;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;  /* Adicionado */
+  z-index: 10;         /* Adicionado */
 
- p {
+  p {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-}
+    text-align: center;
+  }
+
   a {
-    color: #1a73e8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(4, 5, 7);
+    color: white;
     font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
     text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90vw;
+    width: auto;
+    position: relative;  /* Garante que o botão fique clicável */
+    z-index: 10;
 
     &:hover {
-      text-decoration: underline;
+      background-color: #3367D6;
+      transform: scale(1.03);
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-top: -100px;
+
+    p {
+      font-size: 22px;
+    }
+
+    a {
+      font-size: 14px;
+      padding: 10px 16px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
     }
   }
 `;
+
 
 
 const Opinioes = () => {
@@ -90,10 +138,12 @@ const Opinioes = () => {
                 <div><Imagem src={opiniao7} alt="Opinião 7" /></div>
             </Carrossel>
             <AvaliacaoGoogle>
-                <p>Nos avalie no Google!</p>
-                <a href="https://g.co/kgs/2UVNgKZ" target="_blank" rel="noopener noreferrer">
-                    Clique aqui para avaliar
+                <a href="https://g.co/kgs/aPzDeY4" target="_blank" rel="noopener noreferrer">
+                    <img src={GoogleLogo} alt="Google Logo" />
+                    Avalie-nos no Google
                 </a>
+
+
             </AvaliacaoGoogle>
         </Section>
     );
