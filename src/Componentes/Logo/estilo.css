@@ -1,0 +1,81 @@
+/* Header container */
+header {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+/* Logo com imagem e textos */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.logo-textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #c0c0c0;
+}
+
+.nome {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.subtitulo {
+  font-size: 14px;
+  margin: 0;
+  color: #c0c0c0;
+  letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+  font-size: 16px;
+  color: #c0c0c0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu li:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+    flex-direction: column;
+    /* Muda a direção do flex para coluna */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  .logo-img {
+    width: 50%;
+    /* Define a largura da imagem */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
+  }
+}
